@@ -1,5 +1,6 @@
-Spring Data JPA Example Project
+Sping Data JPA Sample Project - OKC JUG June 2012
 ===============================
 
-### Running Example Integration Tests
+### Running Sample Integration Tests
 >mvn clean compile
+=======
