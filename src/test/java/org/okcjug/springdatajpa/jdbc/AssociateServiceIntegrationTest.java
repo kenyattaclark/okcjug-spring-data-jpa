@@ -1,21 +1,21 @@
-package org.okcjug.springdatajpa.persistence.jpa;
+package org.okcjug.springdatajpa.jdbc;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 
 import java.util.List;
 
+import org.hamcrest.CoreMatchers;
+import org.junit.Assert;
 import org.junit.Test;
+import org.okcjug.springdatajpa.common.AbstractShowcaseTest;
 import org.okcjug.springdatajpa.common.AssociateService;
 import org.okcjug.springdatajpa.domain.Associate;
-import org.okcjug.springdatajpa.persistence.common.AbstractShowcaseTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
 
-@ContextConfiguration("classpath:application-context-jpa.xml")
+@ContextConfiguration("classpath:application-context-jdbc.xml")
 public class AssociateServiceIntegrationTest extends AbstractShowcaseTest {
 
     @Autowired
@@ -26,16 +26,8 @@ public class AssociateServiceIntegrationTest extends AbstractShowcaseTest {
 
         List<Associate> result = service.findAll();
 
-        assertThat(result, is(notNullValue()));
-        assertFalse(result.isEmpty());
-    }
-
-    @Test
-    public void findsPageOfMatthews() throws Exception {
-
-        List<Associate> customers = service.findByLastName("Matthews", 0, 2);
-
-        assertThat(customers.size(), is(2));
+        assertThat(result, is(CoreMatchers.notNullValue()));
+        Assert.assertFalse(result.isEmpty());
     }
 
     @Test

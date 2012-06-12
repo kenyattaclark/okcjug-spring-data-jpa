@@ -125,15 +125,14 @@
 			<plugin>
 				<groupId>com.mysema.maven</groupId>
 				<artifactId>maven-apt-plugin</artifactId>
-				<version>1.0</version>
+				<version>0.3.2</version>
 				<executions>
 					<execution>
-						<phase>generate-sources</phase>
 						<goals>
 							<goal>process</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>target/generated-sources/queries</outputDirectory>
+							<outputDirectory>target/generated-sources/java</outputDirectory>
 							<processor>com.mysema.query.apt.jpa.JPAAnnotationProcessor</processor>
 						</configuration>
 					</execution>
@@ -153,7 +152,8 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -169,9 +169,7 @@
 										<artifactId>
 											maven-apt-plugin
 										</artifactId>
-										<versionRange>
-											[1.0,)
-										</versionRange>
+										<versionRange>[0.3.2,)</versionRange>
 										<goals>
 											<goal>process</goal>
 										</goals>

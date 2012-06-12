@@ -1,4 +1,4 @@
-package org.okcjug.springdatajpa.persistence.spring;
+package org.okcjug.springdatajpa.spring;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertFalse;
@@ -8,11 +8,11 @@ import java.util.List;
 
 import org.joda.time.LocalDate;
 import org.junit.Test;
+import org.okcjug.springdatajpa.common.AbstractShowcaseTest;
 import org.okcjug.springdatajpa.dao.AssociateDao;
 import org.okcjug.springdatajpa.dao.TransactionDao;
 import org.okcjug.springdatajpa.domain.Associate;
 import org.okcjug.springdatajpa.domain.Transaction;
-import org.okcjug.springdatajpa.persistence.common.AbstractShowcaseTest;
 import org.okcjug.springdatajpa.predicates.TransactionPredicate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;

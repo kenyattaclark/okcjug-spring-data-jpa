@@ -1,4 +1,4 @@
-package org.okcjug.springdatajpa.persistence.common;
+package org.okcjug.springdatajpa.common;
 
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.springframework.test.context.transaction.BeforeTransaction;
